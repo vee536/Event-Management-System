@@ -2,12 +2,9 @@
 #include "event.h"
 #include "participant.h"
 #include "registration.h"
-<<<<<<< HEAD
 #include "coordinator.h"
 #include "venue.h"
 #include "schedule.h"
-=======
->>>>>>> cf30615d324fc2c6c0538558502b7331f8fd4698
 
 void participantMenu()
 {
@@ -73,10 +70,7 @@ int main()
         printf("\n========== EVENT MANAGEMENT SYSTEM ==========\n");
         printf("1. Event Management\n");
         printf("2. Participant & Registration Management\n");
-<<<<<<< HEAD
         printf("3. Coordinators, Venues & Schedule\n");
-=======
->>>>>>> cf30615d324fc2c6c0538558502b7331f8fd4698
         printf("0. Exit\n");
         printf("Enter your choice: ");
 
@@ -92,13 +86,10 @@ int main()
                 participantMenu();
                 break;
 
-<<<<<<< HEAD
             case 3:
                 coordinatorVenueScheduleMenu();
                 break;
 
-=======
->>>>>>> cf30615d324fc2c6c0538558502b7331f8fd4698
             case 0:
                 printf("Exiting program...\n");
                 break;
