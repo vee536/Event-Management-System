@@ -6,7 +6,7 @@
 struct EventResult
 {
     int eventId;
-    int participantId; /* -1 if it's a team or not registered directly as an individual participant */
+    int participantId; 
     char nameOrTeam[100];
     int position;
     int score;

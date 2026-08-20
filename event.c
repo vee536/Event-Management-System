@@ -6,7 +6,7 @@
 #define MAX_EVENTS 100
 
 
-   //1. ADD EVENT
+   
   
 void addEvent()
 {
@@ -18,7 +18,7 @@ void addEvent()
     printf("Enter Event ID          : ");
     scanf("%d", &e.eventId);
 
-    /* check if this ID is already used */
+    
     if (eventExists(e.eventId))
     {
         printf("An event with this ID already exists. Try again.\n");
@@ -64,9 +64,7 @@ void addEvent()
     printf("Event added successfully!\n");
 }
 
-/* =====================================================
-   2. DISPLAY ALL EVENTS
-   ===================================================== */
+
 void displayEvents()
 {
     struct Event e;
@@ -99,7 +97,7 @@ void displayEvents()
     fclose(fp);
 }
 
-  // 3. SEARCH EVENT
+  
   
 void searchEvent()
 {
@@ -193,7 +191,7 @@ void searchEvent()
 }
 
 
-  // 4. UPDATE EVENT
+  
   
 void updateEvent()
 {
@@ -213,7 +211,7 @@ void updateEvent()
         return;
     }
 
-    /* read everything into an array */
+    
     while (fread(&events[count], sizeof(struct Event), 1, fp) == 1)
     {
         count++;
@@ -260,7 +258,7 @@ void updateEvent()
         return;
     }
 
-    /* rewrite the whole file with updated array */
+    
     fp = fopen(EVENT_FILE, "wb");
     for (i = 0; i < count; i++)
     {
@@ -272,7 +270,7 @@ void updateEvent()
 }
 
 
-  // 5. DELETE / CANCEL EVENT
+  
   
 void deleteEvent()
 {
@@ -325,7 +323,7 @@ void deleteEvent()
         return;
     }
 
-    /* shift all events after position i one step back */
+    
     for (; i < count - 1; i++)
     {
         events[i] = events[i + 1];
@@ -343,7 +341,7 @@ void deleteEvent()
 }
 
 
-  // 6. SORT EVENTS
+  
  
 void sortEvents()
 {
@@ -381,7 +379,7 @@ void sortEvents()
     printf("Enter choice: ");
     scanf("%d", &choice);
 
-    /* simple bubble sort */
+    
     for (i = 0; i < count - 1; i++)
     {
         for (j = 0; j < count - 1 - i; j++)
@@ -422,10 +420,10 @@ void sortEvents()
 }
 
 
-  // HELPER FUNCTIONS (used by other members' modules too)
+  
   
 
-/* returns 1 if event exists, 0 if not */
+
 int eventExists(int eventId)
 {
     struct Event e;
@@ -448,7 +446,7 @@ int eventExists(int eventId)
     return 0;
 }
 
-/* copies the event data into *event, returns 1 if found, 0 if not */
+
 int getEvent(int eventId, struct Event *event)
 {
     struct Event e;
@@ -473,7 +471,7 @@ int getEvent(int eventId, struct Event *event)
 }
 
 
-  // MODULE MENU (this can be called from the team's main menu as option "1. Event Management")
+  
   
 void eventMenu()
 {

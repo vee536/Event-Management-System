@@ -1,7 +1,7 @@
 #ifndef COORDINATOR_H
 #define COORDINATOR_H
 
-/* ---------- Coordinator structure ---------- */
+
 struct Coordinator
 {
     int coordId;
@@ -12,19 +12,19 @@ struct Coordinator
     char assignedEvent[50];
 };
 
-/* ---------- File name ---------- */
+
 #define COORD_FILE "coordinators.dat"
 
-/* ---------- Main modules ---------- */
+
 void addCoordinator();
 void displayCoordinators();
 void searchCoordinator();
 
-/* ---------- Helper functions (other members will call these) ---------- */
+
 int coordinatorExists(int coordId);
 int getCoordinator(int coordId, struct Coordinator *c);
 
-/* ---------- Menu for this module ---------- */
+
 void coordinatorMenu();
 
 #endif

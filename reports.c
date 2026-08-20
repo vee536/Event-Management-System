@@ -10,7 +10,7 @@
 #include "schedule.h"
 #include "results.h"
 
-// Helper function to check if a string contains a substring case-insensitively
+
 static int containsIgnoreCase(const char *str, const char *sub)
 {
     if (!str || !sub) return 0;
@@ -52,7 +52,7 @@ void displayFestStatistics()
     struct Venue v;
     struct Coordinator c;
 
-    // Count events
+    
     fp = fopen(EVENT_FILE, "rb");
     if (fp != NULL)
     {
@@ -67,7 +67,7 @@ void displayFestStatistics()
         fclose(fp);
     }
 
-    // Count participants
+    
     fp = fopen(PARTICIPANT_FILE, "rb");
     if (fp != NULL)
     {
@@ -78,7 +78,7 @@ void displayFestStatistics()
         fclose(fp);
     }
 
-    // Count active registrations
+    
     fp = fopen(REGISTRATION_FILE, "rb");
     if (fp != NULL)
     {
@@ -92,7 +92,7 @@ void displayFestStatistics()
         fclose(fp);
     }
 
-    // Count venues
+    
     fp = fopen(VENUE_FILE, "rb");
     if (fp != NULL)
     {
@@ -103,7 +103,7 @@ void displayFestStatistics()
         fclose(fp);
     }
 
-    // Count coordinators
+    
     fp = fopen(COORD_FILE, "rb");
     if (fp != NULL)
     {
@@ -114,8 +114,8 @@ void displayFestStatistics()
         fclose(fp);
     }
 
-    // Find most popular event
-    // Keep an array of event registration counts
+    
+    
     int eventIds[1000];
     int eventCounts[1000];
     int uniqueEvents = 0;
@@ -302,7 +302,7 @@ static int copyFile(const char *src, const char *dest)
     FILE *fsrc = fopen(src, "rb");
     if (fsrc == NULL)
     {
-        return 0; // src file doesn't exist
+        return 0; 
     }
     FILE *fdest = fopen(dest, "wb");
     if (fdest == NULL)

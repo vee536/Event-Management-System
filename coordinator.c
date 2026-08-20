@@ -6,7 +6,7 @@
 #define MAX_COORDINATORS 100
 
 
-  // 1. ADD COORDINATOR
+  
 
 void addCoordinator()
 {
@@ -18,7 +18,7 @@ void addCoordinator()
     printf("Enter Coordinator ID    : ");
     scanf("%d", &c.coordId);
 
-    /* check if this ID is already used */
+    
     if (coordinatorExists(c.coordId))
     {
         printf("A coordinator with this ID already exists. Try again.\n");
@@ -54,7 +54,7 @@ void addCoordinator()
 }
 
 
-  // 2. DISPLAY ALL COORDINATORS
+  
 
 void displayCoordinators()
 {
@@ -89,7 +89,7 @@ void displayCoordinators()
 }
 
 
-  // 3. SEARCH COORDINATOR
+  
 
 void searchCoordinator()
 {
@@ -173,9 +173,9 @@ void searchCoordinator()
 }
 
 
-  // HELPER FUNCTIONS (used by other modules too, e.g. schedule.c)
+  
 
-/* returns 1 if coordinator exists, 0 if not */
+
 int coordinatorExists(int coordId)
 {
     struct Coordinator c;
@@ -198,7 +198,7 @@ int coordinatorExists(int coordId)
     return 0;
 }
 
-/* copies the coordinator data into *c, returns 1 if found, 0 if not */
+
 int getCoordinator(int coordId, struct Coordinator *c)
 {
     struct Coordinator temp;
@@ -223,7 +223,7 @@ int getCoordinator(int coordId, struct Coordinator *c)
 }
 
 
-  // MODULE MENU
+  
 
 void coordinatorMenu()
 {
